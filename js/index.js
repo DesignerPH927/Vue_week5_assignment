@@ -185,7 +185,7 @@ const app = Vue.createApp({
       const order = this.form;
       axios.post(url, { data: order })
         .then((res) => {
-          console.log(res.data.message);
+          alert(res.data.message);
           this.$refs.form.resetForm();          
           this.getCarts();
         })
