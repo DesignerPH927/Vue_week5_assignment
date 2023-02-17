@@ -202,7 +202,7 @@
                 class="form-control" 
                 placeholder="請輸入 電話"
                 v-model="form.user.tel"
-                rules="required"
+                :rules="isPhone"
                 :class="{ 'is-invalid': errors['電話'] }"
                 ></v-field>
                 <error-message name="電話" 
