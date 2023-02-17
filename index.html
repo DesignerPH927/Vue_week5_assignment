@@ -225,13 +225,19 @@
             </div>
             <div class="mb-3">
               <label for="message" class="form-label">留言</label>
-              <textarea 
-                name="" 
+              <v-field 
                 id="message" 
-                rows="10" 
+                name="留言"
+                type="text"
+                rows="10"                 
                 class="form-control"
+                as="textarea"
+                rules="required"
+                :class="{ 'is-invalid': errors['留言'] }"
                 v-model="form.message">
-              </textarea>
+              </v-field>
+              <error-message name="留言" 
+                class="invalid-feedback"></error-message>
             </div>
             <div class="mb-3 text-end">
               <button class="btn btn-danger"
